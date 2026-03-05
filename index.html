@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glow Events | Elevate Your Party</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="package.css">
+  <link rel="stylesheet" href="hamburger.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+<div class="scroll-container">
+  <div class="scroll-bar" id="progressBar"></div>
+    <div class="scroll-dots">
+      <div class="scroll-dots">
+      <div class="dot active"></div> 
+      <div class="dot"></div>        
+      <div class="dot"></div>        
+      <div class="dot"></div>        
+      <div class="dot"></div>        
+      <div class="dot"></div>        
+    </div>
+  </div>
+</div>
+  
+<nav>
+  <div class="logo">GLOW<span>EVENTS</span></div>
+  
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="nav-links" id="nav-menu">
+    <a href="index.html">HOME</a>
+    <a href="package.html">I NOSTRI PACCHETTI</a>
+    <a href="https://wa.me/3331268874" class="nav-contact">CONTATTACI</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <video autoplay muted loop playsinline class="bg-video">
+     <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay">
+    <h1 class="reveal">GLOW<br>events</h1>
+    <p class="reveal">DJ set, animazione e service professionale.</p>
+  </div>
+</section>
+
+<section class="console-section">
+  <div class="sticky-container">
+    <img src="vinile.PNG" id="dj-gear" alt="Console DJ">
+
+    <div class="package-info">
+        <div class="pack" id="p1">
+            <div class="pack-content">
+                <div class="pack-text">
+                    <h2>18ESIMI</h2>
+                    <p>DJ set commerciale, luci LED e laser show.</p>
+                </div>
+                <div class="pack-img">
+                    <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=600" alt="18esimo">
+                </div>
+            </div>
+        </div>
+
+        <div class="pack" id="p2">
+            <div class="pack-content reverse">
+                <div class="pack-text">
+                    <h2>MATRIMONI</h2>
+                    <p>Eleganza, divertimento e service audio completo.</p>
+                </div>
+                <div class="pack-img">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600" alt="Matrimonio">
+                </div>
+            </div>
+        </div>
+
+        <div class="pack" id="p3">
+            <div class="pack-content">
+                <div class="pack-text">
+                    <h2>FESTE PRIVATE</h2>
+                    <p>Cresime, lauree ed eventi su misura.</p>
+                </div>
+                <div class="pack-img">
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=600" alt="Private Party">
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <h2>PRONTO A FAR<br>SALTARE TUTTI?</h2>
+  
+  <div class="stories-container" id="stories">
+    <div class="story-progress-container">
+      <div class="story-progress-bar"><div class="progress-fill"></div></div>
+      <div class="story-progress-bar"><div class="progress-fill"></div></div>
+      <div class="story-progress-bar"><div class="progress-fill"></div></div>
+    </div>
+
+    <div class="story-slides">
+      <div class="story-slide active">
+        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=600" alt="Party 1">
+      </div>
+      <div class="story-slide">
+        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=600" alt="Party 2">
+      </div>
+      <div class="story-slide">
+        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=600" alt="Party 3">
+      </div>
+    </div>
+
+    <div class="story-nav-overlay">
+      <div class="story-nav-left" onclick="prevStory()"></div>
+      <div class="story-nav-right" onclick="nextStory()"></div>
+    </div>
+  </div>
+
+  <a href="package.html" class="whatsapp-main">I NOSTRI PACCHETTI</a>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-brand">
+      <div class="logo">GLOW<span>EVENTS</span></div>
+      <p>Trasformiamo i tuoi momenti speciali in eventi leggendari.</p>
+      <div class="footer-socials">
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/3331268874" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h4>NAVIGAZIONE</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="package.html">I Nostri Pacchetti</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h4>CONTATTI</h4>
+      <p>Email: francesco.ceci29@gmail.com</p>
+      <p>Tel: +39 3331268874</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Glow Events. Tutti i diritti riservati.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="hamburger.js"></script>
+<script src="storie.js"></script>
+
+</body>
+</html>

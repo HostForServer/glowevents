@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pacchetti | Glow Events</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="package.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="hamburger.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+<nav>
+  <div class="logo">GLOW<span>EVENTS</span></div>
+  
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="nav-links" id="nav-menu">
+    <a href="index.html">HOME</a>
+    <a href="package.html">I NOSTRI PACCHETTI</a>
+    <a href="https://wa.me/3331268874" class="nav-contact">CONTATTACI</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <video autoplay muted loop playsinline class="bg-video">
+     <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay">
+    <h1 class="reveal">GLOW<br>events</h1>
+    <p class="reveal">DJ set, animazione e service professionale.</p>
+  </div>
+</section>
+
+<section class="pricing-section">
+    <div class="container">
+        <div class="pricing-grid">
+            
+            <div class="price-card">
+                <div class="card-carousel">
+                    <div class="carousel-track">
+                        <img src="https://images.unsplash.com/photo-1574672280600-4accfa5b6f98?q=80&w=600" alt="Setup Essential 1">
+                        <img src="https://images.unsplash.com/photo-1459749411177-042180ce673c?q=80&w=600" alt="Setup Essential 2">
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="prev">←</button>
+                        <button class="next">→</button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-tag">Audio e luci essenziali</div>
+                    <h3>Pacchetto Start</h3>
+                    <ul class="features">
+                        <li><i class="fas fa-compact-disc"></i>Console DJ Professionale</li>
+                        <li><i class="fas fa-volume-up"></i>Impianto Audio High-End</li>
+                        <li><i class="fas fa-smog"></i>Macchina Del Fumo</li>
+                        <li><i class="fas fa-lightbulb"></i>2 Luci Motorizzate</li>
+                        <li class="disabled"><i class="fas fa-bolt"></i>Set Completo Luci Strobo</li>
+                        <li class="disabled"><i class="fas fa-layer-group"></i>Strutture elevate per le luci</li>
+                    </ul>
+                    <a href="https://wa.me/3331268874" class="btn-select">INFO ESSENTIAL</a>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="card-carousel">
+                    <div class="carousel-track">
+                        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=600" alt="Setup Glow 1">
+                        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=600" alt="Setup Glow 2">
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="prev">←</button>
+                        <button class="next">→</button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-tag">Effetti ed Atmosfera</div>
+                    <h3>Pacchetto Party</h3>
+                    <ul class="features">
+                        <li><i class="fas fa-compact-disc"></i>Console DJ Professionale</li>
+                        <li><i class="fas fa-volume-up"></i>Impianto Audio High-End</li>
+                        <li><i class="fas fa-smog"></i>Macchina Del Fumo</li>
+                        <li><i class="fas fa-lightbulb"></i>2 Luci Motorizzate</li>
+                        <li><i class="fas fa-bolt"></i>1 Luce Strobo</li>
+                        <li class="disabled"><i class="fas fa-layer-group"></i>Strutture elevate per le luci</li>
+                    </ul>
+                    <a href="https://wa.me/3331268874" class="btn-select">INFO GLOW</a>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="card-carousel">
+                    <div class="carousel-track">
+                        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=600" alt="Setup Glow 1">
+                        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=600" alt="Setup Glow 2">
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="prev">←</button>
+                        <button class="next">→</button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-tag">Set-up Scenografico</div>
+                    <h3>Pacchetto Show</h3>
+                    <ul class="features">
+                        <li><i class="fas fa-compact-disc"></i>Console DJ Professionale</li>
+                        <li><i class="fas fa-volume-up"></i>Impianto Audio High-End</li>
+                        <li><i class="fas fa-smog"></i>Macchina Del Fumo</li>
+                        <li><i class="fas fa-lightbulb"></i>2 Luci Motorizzate</li>
+                        <li><i class="fas fa-bolt"></i><strong>Set Completo Luci Strobo</strong></li>
+                        <li><i class="fas fa-layer-group"></i><strong>Strutture elevate per le luci</strong></li>
+                    </ul>
+                    <a href="https://wa.me/3331268874" class="btn-select">INFO GLOW</a>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="card-carousel">
+                    <div class="carousel-track">
+                        <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?q=80&w=600" alt="Setup Ultimate 1">
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=600" alt="Setup Ultimate 2">
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="prev">←</button>
+                        <button class="next">→</button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-tag">Evento Completo</div>
+                    <h3>Pacchetto Glow</h3>
+                    <ul class="features">
+                        <li><i class="fas fa-compact-disc"></i> Console DJ Professionale</li>
+                        <li><i class="fas fa-volume-up"></i> Impianto Audio High-End</li>
+                        <li><i class="fas fa-smog"></i> Macchina Del Fumo</li>
+                        <li><i class="fas fa-lightbulb"></i> <strong>Set Completo Luci Motorizzate</strong></li>
+                        <li><i class="fas fa-bolt"></i> <strong>Set Completo Luci Strobo</strong></li>
+                        <li><i class="fas fa-layer-group"></i> <strong>Strutture elevate per le luci</strong></li>
+                    </ul>
+                    <a href="https://wa.me/3331268874" class="btn-select">INFO ULTIMATE</a>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="card-carousel">
+                    <div class="carousel-track">
+                        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=600" alt="Setup Glow 1">
+                        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=600" alt="Setup Glow 2">
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="prev">←</button>
+                        <button class="next">→</button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-tag">IN PIÙ</div>
+                    <h3>Sparkular</h3>
+                    <ul class="features">
+                        <li>Trasforma i momenti clou del tuo evento in uno spettacolo indimenticabile. Perfette per il taglio della torta, il primo ballo o un ingresso trionfale.</li>
+                    </ul>
+                    <a href="https://wa.me/3331268874" class="btn-select">INFO GLOW</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-brand">
+      <div class="logo">GLOW<span>EVENTS</span></div>
+      <p>Trasformiamo i tuoi momenti speciali in eventi leggendari.</p>
+      <div class="footer-socials">
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/3331268874" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h4>NAVIGAZIONE</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="package.html">I Nostri Pacchetti</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h4>CONTATTI</h4>
+      <p>Email: francesco.ceci29@gmail.com</p>
+      <p>Tel: +39 3331268874</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Glow Events. Tutti i diritti riservati.</p>
+  </div>
+</footer>
+
+<script src="package.js"></script>
+<script src="hamburger.js"></script>
+</body>
+</html>
