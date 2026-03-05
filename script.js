@@ -10,7 +10,23 @@ gsap.from(".reveal", {
 });
 
 // Carosello con loop e swipe touch
-const scrollDistance = window.innerWidth < 768 ? "+=800%" : "+=500%";
+const width = window.innerWidth;
+
+let scrollDistance;
+
+if (width <= 320) {           // iPhone SE / piccoli smartphone
+  scrollDistance = "+=200%";
+} else if (width <= 375) {    // iPhone 8 / iPhone SE 2
+  scrollDistance = "+=200%";
+} else if (width <= 414) {    // iPhone 11, 12, 13, 14, 15 Pro Max / iPhone XR
+  scrollDistance = "+=200%";
+} else if (width <= 480) {    // smartphone più grandi
+  scrollDistance = "+=220%";
+} else if (width <= 768) {    // tablet portrait
+  scrollDistance = "+=350%";
+} else {                      // desktop
+  scrollDistance = "+=450%";
+}
 
 // Timeline principale
 const tl = gsap.timeline({
@@ -18,7 +34,7 @@ const tl = gsap.timeline({
     trigger: ".console-section",
     start: "top top",
     end: scrollDistance, 
-    scrub: 1.5,     
+    scrub: 0.5,     
     pin: true,     
     anticipatePin: 1
   }
@@ -30,7 +46,7 @@ tl.to("#dj-gear", {
     rotation: 180, 
     filter: "blur(10px)",     
     opacity: 0, 
-    duration: 1,        
+    duration: 1.1,        
     ease: "power2.in"   
 });
 
@@ -39,19 +55,19 @@ function setupPack(id, xOffset) {
     tl.to(id, { 
         opacity: 1, 
         pointerEvents: "all", 
-        duration: 2     
+        duration: 1     
     })
     .from(`${id} .pack-img`, { 
         x: xOffset, 
         opacity: 0, 
-        duration: 1.5    
+        duration: 0.8    
     }, "<")           
     
-    .to({}, { duration: 2 }) 
+    .to({}, { duration: 1 }) 
     
     .to(id, { 
         opacity: 0, 
-        y: -50, 
+        y: -30, 
         duration: 1.5    
     });
 }
