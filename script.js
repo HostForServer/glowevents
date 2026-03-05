@@ -30,7 +30,7 @@ tl.to("#dj-gear", {
     rotation: 180, 
     filter: "blur(10px)",     
     opacity: 0, 
-    duration: 5,        
+    duration: 1,        
     ease: "power2.in"   
 });
 
@@ -39,26 +39,26 @@ function setupPack(id, xOffset) {
     tl.to(id, { 
         opacity: 1, 
         pointerEvents: "all", 
-        duration: 3     
+        duration: 2     
     })
     .from(`${id} .pack-img`, { 
         x: xOffset, 
         opacity: 0, 
-        duration: 2    
+        duration: 1.5    
     }, "<")           
     
-    .to({}, { duration: 3 }) 
+    .to({}, { duration: 2 }) 
     
     .to(id, { 
         opacity: 0, 
         y: -50, 
-        duration: 2    
+        duration: 1.5    
     });
 }
 
-setupPack("#p1", 100);  
-setupPack("#p2", -100); 
-setupPack("#p3", 100);  
+setupPack("#p1", 100, 0.3);  
+setupPack("#p2", -100, 0.3); 
+setupPack("#p3", 100, 0.3);  
 
 tl.to(".sticky-container", { 
     opacity: 0, 
@@ -91,8 +91,11 @@ window.addEventListener("scroll", () => {
     if (scrolled < 15) {
       updateActive(0);
     } else if (scrolled >= 15 && scrolled < 30) {
+      updateActive(1);
     } else if (scrolled >= 30 && scrolled < 48) {
+      updateActive(2);
     } else if (scrolled >= 48 && scrolled < 66) {
+      updateActive(3);
     } else if (scrolled >= 66 && scrolled < 85) {
       updateActive(4); 
     } else {
