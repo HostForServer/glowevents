@@ -150,11 +150,7 @@ nav {
   justify-content: center; 
   align-items: center; 
   text-align: center; 
-  background: linear-gradient(
-  to bottom,
-  rgba(0,0,0,0.4),
-  rgba(0,0,0,0.7)
-  ); 
+  background: rgba(0,0,0,0.4); 
 }
 
 .hero h1 { 
@@ -179,7 +175,7 @@ nav {
 /* Console Section */
 
 .console-section { 
-  height: 100vh; 
+  height: 80vh; 
   background: var(--bg-dark);
   position: relative;
 }
@@ -253,7 +249,7 @@ nav {
 /* Final CTA */
 
 .final-cta { 
-  min-height: 100vh; 
+  min-height: 80vh; 
   display: flex; 
   flex-direction: column; 
   justify-content: center; 
@@ -328,7 +324,7 @@ footer {
   text-decoration: none; color: var(--text-main); font-size: 0.8rem; transition: 0.3s;
 }
 
-.footer-socials a:hover { background: var(--text-main); color: #000; transform: translateY(-5px); }
+.footer-socials a:hover { background: var(--text-main); color: #000; }
 
 .footer-links h4, .footer-contact h4 { font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 25px; }
 .footer-links ul { list-style: none; }

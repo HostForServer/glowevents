@@ -21,7 +21,7 @@ if (width <= 320) {           // iPhone SE / piccoli smartphone
 } else if (width <= 414) {    // iPhone 11, 12, 13, 14, 15 Pro Max / iPhone XR
   scrollDistance = "+=200%";
 } else if (width <= 480) {    // smartphone più grandi
-  scrollDistance = "+=220%";
+  scrollDistance = "+=200%";
 } else if (width <= 768) {    // tablet portrait
   scrollDistance = "+=350%";
 } else {                      // desktop
@@ -46,7 +46,7 @@ tl.to("#dj-gear", {
     rotation: 180, 
     filter: "blur(10px)",     
     opacity: 0, 
-    duration: 1.1,        
+    duration: 1.8,        
     ease: "power2.in"   
 });
 
