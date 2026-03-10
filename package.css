@@ -271,6 +271,24 @@ strong {
     color: #a9a6a6;
 }
 
+/* Sezione Extra */
+
+.extras-title{
+  text-align:center;
+  margin:90px 0 50px;
+}
+
+.extras-title h2{
+  font-size:2rem;
+  margin-bottom:10px;
+  font-weight:900;
+}
+
+.extras-title p{
+  color:var(--text-muted);
+  font-size:0.9rem;
+}
+
 /* Bottoni */
 
 .btn-select {
