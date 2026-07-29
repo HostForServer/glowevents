@@ -320,6 +320,13 @@ strong {
 
 /* Sezione Extra */
 
+.extras-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,380px));
+    justify-content:center;
+    gap:30px;
+}
+
 .extras-title{
   text-align:center;
   margin:90px 0 50px;
