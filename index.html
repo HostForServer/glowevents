@@ -2,166 +2,256 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0720" />
   <title>Glow Events | Elevate Your Party</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <meta name="description" content="DJ set, animazione e service professionale per 18esimi, matrimoni e feste private." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Unbounded:wght@500;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="package.css">
   <link rel="stylesheet" href="hamburger.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
 
-<div class="scroll-container">
-  <div class="scroll-bar" id="progressBar"></div>
+<div class="bar" id="progressBar" aria-hidden="true"></div>
 
-  <div class="scroll-dots">
-    <div class="dot active"></div> 
-    <div class="dot"></div>        
-    <div class="dot"></div>        
-    <div class="dot"></div>        
-    <div class="dot"></div>        
-    <div class="dot"></div>        
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="index.html" aria-label="Glow Events, home">GLOW<span>events</span></a>
+
+    <button class="hamburger" id="hamburger" type="button" aria-label="Apri il menu" aria-controls="nav-menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-links" id="nav-menu" aria-label="Principale">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="package.html">I nostri pacchetti</a>
+      <a href="https://wa.me/393331268874" class="nav-contact" target="_blank" rel="noopener">Contattaci</a>
+    </nav>
   </div>
-</div>
-  
-<nav>
-  <div class="logo">GLOW<span>events</span></div>
-  
-  <div class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
+</header>
+
+<main>
+  <section class="hero" id="top">
+    <video id="hv" muted loop playsinline autoplay preload="metadata" aria-hidden="true">
+      <source src="video.mov" type="video/mp4">
+    </video>
+    <canvas id="fx" aria-hidden="true"></canvas>
+    <div class="wrap hero-in">
+      <h1 aria-label="Glow Events"><span class="w" aria-hidden="true"><span class="l" style="--i:0">G</span><span class="l" style="--i:1">L</span><span class="l" style="--i:2">O</span><span class="l" style="--i:3">W</span></span><span class="sub" aria-hidden="true">events</span></h1>
+      <p class="lead">DJ set, animazione e service professionale.</p>
+      <div class="cta">
+        <a class="btn btn-pri" href="package.html">Vedi i pacchetti</a>
+        <a class="btn btn-ghost" href="#contatti">Parlaci della tua serata</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="mq" aria-hidden="true">
+    <div class="mq-track">
+      <div class="mq-g"><span>18esimi</span><span>Matrimoni</span><span>Feste private</span><span>DJ set</span><span>Animazione</span><span>Service professionale</span></div>
+      <div class="mq-g"><span>18esimi</span><span>Matrimoni</span><span>Feste private</span><span>DJ set</span><span>Animazione</span><span>Service professionale</span></div>
+    </div>
   </div>
 
-  <div class="nav-links" id="nav-menu">
-    <a href="index.html">HOME</a>
-    <a href="package.html">I NOSTRI PACCHETTI</a>
-    <a href="https://wa.me/3331268874" class="nav-contact">CONTATTACI</a>
-  </div>
-</nav>
+  <section class="sec" id="servizi">
+    <div class="wrap">
+      <h2 class="rv">Una serata, un solo team.</h2>
+      <p class="intro rv" style="--d:80ms">Musica, luci e audio arrivano insieme. Hai una persona sola con cui parlare e più tempo per goderti la festa.</p>
 
-<section class="hero">
-  <video autoplay muted loop playsinline class="bg-video">
-     <source src="video.mov" type="video/mp4">
-  </video>
-  <div class="hero-overlay">
-    <h1 class="reveal">GLOW<br><h1 id="eventsline">events</h1></h1>
-    <p class="reveal">DJ set, animazione e service professionale.</p>
-  </div>
-</section>
+      <div class="stack">
+        <article class="sc" style="--i:0;--c:var(--pink)">
+          <div>
+            <h3>DJ set e animazione</h3>
+            <p>Musica mixata dal vivo per far ballare tutti, dall'inizio alla fine della serata.</p>
+            <ul>
+              <li>Console DJ professionale</li>
+              <li>DJ set commerciale, perfetto per i 18 anni</li>
+              <li>Animazione per coinvolgere gli ospiti</li>
+            </ul>
+          </div>
+          <div class="sc-v" aria-hidden="true"><div class="vinyl"><img src="vinile.PNG" alt="" loading="lazy"></div></div>
+        </article>
 
-<section class="console-section">
-  <div class="sticky-container">
-    <img src="vinile.PNG" id="dj-gear" alt="Console DJ">
+        <article class="sc" style="--i:1;--c:var(--cyan)">
+          <div>
+            <h3>Luci ed effetti</h3>
+            <p>Luci motorizzate e strobo, macchina del fumo e strutture elevate per far brillare la pista.</p>
+            <ul>
+              <li>Luci motorizzate e set strobo</li>
+              <li>Macchina del fumo</li>
+              <li>Sparkular per i momenti clou</li>
+            </ul>
+          </div>
+          <div class="sc-v" aria-hidden="true"><div class="cones"><span></span><span></span><span></span></div></div>
+        </article>
 
-    <div class="package-info">
-        <div class="pack" id="p1">
-            <div class="pack-content">
-                <div class="pack-text">
-                    <h2>18ESIMI</h2>
-                    <p>DJ set commerciale, luci LED e laser show.</p>
-                </div>
-                <div class="pack-img">
-                    <img src="p_18.jpg" alt="18esimo">
-                </div>
-            </div>
+        <article class="sc" style="--i:2;--c:var(--uv-soft)">
+          <div>
+            <h3>Audio e video</h3>
+            <p>In ogni pacchetto trovi impianto audio high-end e videoproiettore, montati e pronti per l'arrivo degli ospiti.</p>
+            <ul>
+              <li>Impianto audio high-end</li>
+              <li>Videoproiettore</li>
+              <li>Service professionale per ogni location</li>
+            </ul>
+          </div>
+          <div class="sc-v" aria-hidden="true"><div class="shot"><img src="p_projector.png" alt="" loading="lazy"></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec nt" id="eventi">
+    <div class="wrap">
+      <h2 class="rv">Per ogni occasione.</h2>
+      <p class="intro rv" style="--d:80ms">Scegli il tipo di serata e guarda i pacchetti.</p>
+    </div>
+    <div class="car" tabindex="0" aria-label="Tipi di evento, scorri di lato">
+      <a class="ev" href="package.html" style="--c:var(--pink)">
+        <img src="p_18.jpg" alt="Allestimento con arco di palloncini e torta per un 18esimo" loading="lazy">
+        <h3>18esimi</h3>
+        <p>DJ set commerciale, luci LED e laser show.</p>
+        <span class="go">Vedi i pacchetti</span>
+      </a>
+      <a class="ev" href="package.html" style="--c:var(--cyan)">
+        <img src="p_sparkular.png" alt="Torta nuziale circondata da fontane di scintille" loading="lazy">
+        <h3>Matrimoni</h3>
+        <p>Eleganza, divertimento e service audio completo.</p>
+        <span class="go">Vedi i pacchetti</span>
+      </a>
+      <a class="ev" href="package.html" style="--c:var(--uv-soft)">
+        <img src="p_party.jpg" alt="Set-up DJ con luci viola e fumo" loading="lazy">
+        <h3>Feste private</h3>
+        <p>Cresime, lauree ed eventi su misura.</p>
+        <span class="go">Vedi i pacchetti</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="sec nt story-sec" id="storie">
+    <div class="wrap">
+      <h2 class="rv">Il tuo evento, la tua storia.</h2>
+
+      <div class="stories-container" id="stories" aria-label="Storie delle nostre serate">
+        <div class="story-progress-container" aria-hidden="true">
+          <div class="story-progress-bar"><div class="progress-fill"></div></div>
+          <div class="story-progress-bar"><div class="progress-fill"></div></div>
+          <div class="story-progress-bar"><div class="progress-fill"></div></div>
+          <div class="story-progress-bar"><div class="progress-fill"></div></div>
         </div>
 
-        <div class="pack" id="p2">
-            <div class="pack-content reverse">
-                <div class="pack-text">
-                    <h2>MATRIMONI</h2>
-                    <p>Eleganza, divertimento e service audio completo.</p>
-                </div>
-                <div class="pack-img">
-                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600" alt="Matrimonio">
-                </div>
-            </div>
+        <div class="story-slides">
+          <div class="story-slide active"><video src="storia1.mov" muted loop playsinline preload="metadata"></video></div>
+          <div class="story-slide"><video src="storia2.mov" muted loop playsinline preload="none"></video></div>
+          <div class="story-slide"><video src="storia3.MP4" muted loop playsinline preload="none"></video></div>
+          <div class="story-slide"><video src="storia4.MP4" muted loop playsinline preload="none"></video></div>
         </div>
 
-        <div class="pack" id="p3">
-            <div class="pack-content">
-                <div class="pack-text">
-                    <h2>FESTE PRIVATE</h2>
-                    <p>Cresime, lauree ed eventi su misura.</p>
-                </div>
-                <div class="pack-img">
-                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=600" alt="Private Party">
-                </div>
-            </div>
+        <div class="story-nav-overlay">
+          <button class="story-nav-left" type="button" aria-label="Storia precedente"></button>
+          <button class="story-nav-right" type="button" aria-label="Storia successiva"></button>
         </div>
-    </div>
-  </div>
-</section>
+      </div>
 
-<section class="final-cta">
-  <h2>Il tuo evento,<br>la tua storia</h2>
-  
-  <div class="stories-container" id="stories">
-    <div class="story-progress-container">
-      <div class="story-progress-bar"><div class="progress-fill"></div></div>
-      <div class="story-progress-bar"><div class="progress-fill"></div></div>
-      <div class="story-progress-bar"><div class="progress-fill"></div></div>
-      <div class="story-progress-bar"><div class="progress-fill"></div></div>
+      <a class="btn btn-pri" href="package.html">I nostri pacchetti</a>
     </div>
+  </section>
 
-    <div class="story-slides">
-      <div class="story-slide active">
-        <video src="storia1.mov" autoplay muted loop playsinline></video>
-      </div>
-      <div class="story-slide">
-        <video src="storia2.mov" autoplay muted loop playsinline></video>
-      </div>
-      <div class="story-slide">
-        <video src="storia3.MP4" autoplay muted loop playsinline></video>
-      </div>
-      <div class="story-slide">
-        <video src="storia4.MP4" autoplay muted loop playsinline></video>
+  <section class="sec nt" id="foto">
+    <div class="wrap">
+      <h2 class="rv">I nostri set-up.</h2>
+      <p class="intro rv" style="--d:80ms">Luci, audio e fumo: alcuni dei set-up che portiamo alle serate.</p>
+      <div class="gal">
+        <figure class="ph rv" data-par><div class="ph-in"><img src="p_party.jpg" alt="Set-up Party con luci viola e fumo" loading="lazy"></div><figcaption>Setup Party</figcaption></figure>
+        <figure class="ph rv" data-par style="--d:80ms"><div class="ph-in"><img src="p_show.jpg" alt="Set-up Show con luci motorizzate su piedistalli" loading="lazy"></div><figcaption>Setup Show</figcaption></figure>
+        <figure class="ph wide rv" data-par><div class="ph-in"><img src="p_18.jpg" alt="Allestimento di un 18esimo con palloncini e torta" loading="lazy"></div><figcaption>Festa di 18 anni</figcaption></figure>
+        <figure class="ph rv" data-par><div class="ph-in"><img src="p_glow.jpg" alt="Set-up Glow con fontane di scintille e luci motorizzate" loading="lazy"></div><figcaption>Setup Glow</figcaption></figure>
+        <figure class="ph rv" data-par style="--d:80ms"><div class="ph-in"><img src="p_start.png" alt="Set-up Start con due luci motorizzate e fumo" loading="lazy"></div><figcaption>Setup Start</figcaption></figure>
+        <figure class="ph wide rv" data-par><div class="ph-in"><img src="sfondoPackage.jpg" alt="Console DJ con computer sotto un soffitto di piante sospese" loading="lazy" style="object-position:50% 70%"></div><figcaption>In consolle</figcaption></figure>
       </div>
     </div>
+  </section>
 
-    <div class="story-nav-overlay">
-      <div class="story-nav-left" onclick="prevStory()"></div>
-      <div class="story-nav-right" onclick="nextStory()"></div>
+  <section class="sec nt" id="come">
+    <div class="wrap">
+      <h2 class="rv">Dalla richiesta alla pista.</h2>
+      <ol class="steps">
+        <li>
+          <h3>Ci scrivi su WhatsApp</h3>
+          <p>Data, tipo di serata e luogo. Bastano poche righe.</p>
+        </li>
+        <li>
+          <h3>Scegliamo il pacchetto</h3>
+          <p>Ti diciamo quale formula serve davvero alla tua location e ai tuoi ospiti.</p>
+        </li>
+        <li>
+          <h3>La sera si balla</h3>
+          <p>Montiamo luci, audio e fumo prima che arrivino gli ospiti.</p>
+        </li>
+      </ol>
     </div>
-  </div>
+  </section>
 
-  <a href="package.html" class="whatsapp-main">I NOSTRI PACCHETTI</a>
-</section>
-
-<footer>
-  <div class="footer-content">
-    <div class="footer-brand">
-      <div class="logo">GLOW<span>events</span></div>
-      <p>Trasformiamo i tuoi momenti speciali in eventi indimenticabili.</p>
-      <div class="footer-socials">
-        <a href="https://www.instagram.com/glow_events__/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/3331268874" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <section class="sec nt" id="contatti">
+    <div class="wrap">
+      <h2 class="rv">Raccontaci la tua serata.</h2>
+      <p class="intro rv" style="--d:80ms">Compila i campi: il messaggio si scrive da solo e lo mandi su WhatsApp.</p>
+      <div class="contact">
+        <form class="card" id="f" autocomplete="off" novalidate>
+          <div class="fld"><label for="n">Il tuo nome</label><input id="n" type="text" autocomplete="given-name"></div>
+          <div class="fld"><label for="t">Che serata è?</label>
+            <select id="t">
+              <option value="">Scegli il tipo di serata</option>
+              <option value="un 18esimo">18esimo</option>
+              <option value="un matrimonio">Matrimonio</option>
+              <option value="una festa privata">Festa privata</option>
+              <option value="un altro evento">Altro</option>
+            </select>
+          </div>
+          <div class="row2">
+            <div class="fld"><label for="d">Data</label><input id="d" type="date"></div>
+            <div class="fld"><label for="g">Ospiti circa</label><input id="g" type="number" inputmode="numeric" min="1" max="1000"></div>
+          </div>
+          <div class="fld"><label for="l">Luogo</label><input id="l" type="text" placeholder="Città o nome della location"></div>
+        </form>
+        <div>
+          <div class="bubble"><textarea id="msg" readonly aria-label="Anteprima del messaggio"></textarea></div>
+          <div class="acts">
+            <a class="btn btn-pri" id="wa" href="https://wa.me/393331268874" target="_blank" rel="noopener">Apri WhatsApp</a>
+            <button class="btn btn-ghost" id="cp" type="button">Copia testo</button>
+          </div>
+          <p class="note">Il messaggio non parte da solo: si apre WhatsApp e lo invii tu.</p>
+        </div>
       </div>
     </div>
+  </section>
+</main>
 
-    <div class="footer-links">
-      <h4>NAVIGAZIONE</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="package.html">I Nostri Pacchetti</a></li>
-      </ul>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="index.html">GLOW<span>events</span></a>
+        <p style="margin-top:.8rem;max-width:22rem">Trasformiamo i tuoi momenti speciali in eventi indimenticabili.</p>
+      </div>
+      <div>
+        <h4>Navigazione</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="package.html">I nostri pacchetti</a></li>
+          <li><a href="https://www.instagram.com/glow_events__/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://wa.me/393331268874" target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contatti</h4>
+        <p>Email: francesco.ceci29@gmail.com</p>
+        <p>Tel: +39 3331268874</p>
+      </div>
     </div>
-
-    <div class="footer-contact">
-      <h4>CONTATTI</h4>
-      <p>Email: francesco.ceci29@gmail.com</p>
-      <p>Tel: +39 3331268874</p>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>&copy; 2026 Glow Events. Tutti i diritti riservati.</p>
+    <p class="foot-bottom">&copy; 2026 Glow Events. Tutti i diritti riservati.</p>
   </div>
 </footer>
 

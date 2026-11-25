@@ -1,65 +1,39 @@
-gsap.registerPlugin(ScrollTrigger);
+// Pagina pacchetti: comparsa delle card allo scroll e parallasse dell'immagine in alto.
+(function () {
+  'use strict';
 
-gsap.from(".reveal", { y: 30, opacity: 0, duration: 1, stagger: 0.2 });
+  var root = document.documentElement;
+  var reduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
 
-gsap.from(".price-card", {
-    scrollTrigger: { trigger: ".pricing-grid", start: "top 85%" },
-    opacity: 0,
-    scale: 0.95,  
-    duration: 0.8,
-    stagger: 0.2,
-    ease: "power3.out"
-});
-//  Carosello con loop e swipe touch
-const cards = document.querySelectorAll('.price-card');
+  root.classList.add('js');
 
-cards.forEach(card => {
-    const track = card.querySelector('.carousel-track');
-    const imgs = Array.from(track.querySelectorAll('img'));
-    const nextBtn = card.querySelector('.next');
-    const prevBtn = card.querySelector('.prev');
-    
-    let index = 0;
+  function $$(s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); }
 
-    function updateCarousel() {
-        gsap.to(track, {
-            x: -(index * 100) + "%",
-            duration: 0.1,
-            ease: "power2.inOut"
-        });
-    }
+  var rv = $$('.rv');
+  if ('IntersectionObserver' in window && !reduce) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    rv.forEach(function (el) { io.observe(el); });
+  } else {
+    rv.forEach(function (el) { el.classList.add('in'); });
+  }
 
-    nextBtn.addEventListener('click', () => {
-        index = (index + 1) % imgs.length;
-        updateCarousel();
-    });
-
-    prevBtn.addEventListener('click', () => {
-        index = (index - 1 + imgs.length) % imgs.length;
-        updateCarousel();
-    });
-
-    let startX = 0;
-    let moveX = 0;
-    let isDown = false;
-
-    track.addEventListener('pointerdown', e => {
-        isDown = true;
-        startX = e.clientX || e.touches[0].clientX;
-    });
-    track.addEventListener('pointermove', e => {
-        if (!isDown) return;
-        moveX = (e.clientX || e.touches[0].clientX) - startX;
-    });
-    track.addEventListener('pointerup', e => {
-        if (!isDown) return;
-        isDown = false;
-        if (moveX < -50) { 
-            index = (index + 1) % imgs.length;
-        } else if (moveX > 50) { 
-            index = (index - 1 + imgs.length) % imgs.length;
-        }
-        updateCarousel();
-        moveX = 0;
-    });
-});
+  var hero = document.querySelector('.phero');
+  if (hero && !reduce) {
+    var queued = false;
+    var update = function () {
+      queued = false;
+      var r = hero.getBoundingClientRect();
+      if (r.bottom < 0) return;
+      var p = Math.max(0, Math.min(1, -r.top / Math.max(r.height, 1)));
+      hero.style.setProperty('--py', p.toFixed(3));
+    };
+    window.addEventListener('scroll', function () {
+      if (!queued) { queued = true; requestAnimationFrame(update); }
+    }, { passive: true });
+    update();
+  }
+})();

@@ -1,24 +1,34 @@
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('nav-menu');
+// Menu: apre e chiude il pannello su telefono e blocca lo scroll della pagina
+(function () {
+  'use strict';
 
-hamburger.addEventListener('click', () => {
-    // Aggiunge o toglie la classe 'active' ad entrambi gli elementi
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-    
-    // Blocca lo scroll del body quando il menu è aperto
-    if (navMenu.classList.contains('active')) {
-        document.body.style.overflow = 'hidden';
-    } else {
-        document.body.style.overflow = 'auto';
-    }
-});
+  var hamburger = document.getElementById('hamburger');
+  var navMenu = document.getElementById('nav-menu');
+  if (!hamburger || !navMenu) return;
 
-// Chiudi il menu se clicchi su un link (utile per navigazione interna)
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-        document.body.style.overflow = 'auto';
-    });
-});
+  function setOpen(open) {
+    hamburger.classList.toggle('active', open);
+    navMenu.classList.toggle('active', open);
+    hamburger.setAttribute('aria-expanded', String(open));
+    hamburger.setAttribute('aria-label', open ? 'Chiudi il menu' : 'Apri il menu');
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+
+  hamburger.addEventListener('click', function () {
+    setOpen(!navMenu.classList.contains('active'));
+  });
+
+  // chiude il menu quando tocchi un link
+  Array.prototype.forEach.call(navMenu.querySelectorAll('a'), function (link) {
+    link.addEventListener('click', function () { setOpen(false); });
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') setOpen(false);
+  });
+
+  // passando a desktop il pannello torna a essere la barra in riga
+  window.addEventListener('resize', function () {
+    if (window.innerWidth >= 900) setOpen(false);
+  });
+})();
