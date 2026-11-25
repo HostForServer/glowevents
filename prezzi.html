@@ -2,143 +2,87 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Offerta Riservata | Glow Events</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0c10">
+  <meta name="robots" content="noindex">
+  <title>Offerta riservata | Glow Events</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Unbounded:wght@500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="prezzi.css">
 </head>
 <body>
+<div class="bar" id="progressBar" aria-hidden="true"></div>
+<header class="nav"><div class="wrap nav-in"><span class="logo">GLOW<span>events</span></span><span class="priv">Offerta riservata</span></div></header>
+<main>
+  <section class="wrap v-intro">
+    <h1 class="rv">Scegli il pacchetto ideale per te.</h1>
+    <p class="rv" style="--d:80ms">Ciao! Abbiamo preparato questa panoramica dettagliata per aiutarti a scegliere la configurazione perfetta per il tuo party. Ogni pacchetto è modulabile in base alle tue esigenze.</p>
+    <div class="all rv" style="--d:200ms"><p class="all-t">In tutti i pacchetti</p><ul class="chips"><li>Console DJ professionale</li><li>Videoproiettore</li><li>Impianto audio high-end</li><li>Macchina del fumo</li></ul><p class="all-n">Cambiano solo luci e strutture: le trovi evidenziate in blu in ogni pacchetto.</p></div>
 
-<header class="private-header">
-  <div class="logo">GLOW<span>events</span></div>
- <!-- <div class="badge-private">PROPOSTA RISERVATA 2026</div> -->
-</header>
-
-<main class="content-wrapper">
-  
-  <section class="intro-text">
-    <h1>Scegli il pacchetto, <br><span class="gradient-text">ideale per te.</span></h1>
-    <p>Ciao! Abbiamo preparato questa panoramica dettagliata per aiutarti a scegliere la configurazione perfetta per il tuo party. Ogni pacchetto è modulabile in base alle tue esigenze.</p>
   </section>
-
-  <div class="detailed-offers">
-    
-    <article class="offer-item base">
-      <div class="offer-header">
-        <span class="tag">Entry Level</span>
-        <h2>Pacchetto Start</h2>
-        <div class="price">€ <span>300</span></div>
-      </div>
-      <div class="offer-body">
-        <p class="description">
-          Ideale per feste intime o ambienti piccoli. Tutto il necessario per far partire il party senza complicazioni, con un setup professionale ma compatto.
-        </p>
-        <ul class="specs">
-          <li><i class="fas fa-compact-disc"></i>Console DJ Professionale</li> 
-            <li><i class="fas fa-video"></i>Videoproiettore</li>
-            <li><i class="fas fa-volume-up"></i>Impianto Audio High-End</li>
-            <li><i class="fas fa-smog"></i>Macchina Del Fumo</li>
-            <li><i class="fas fa-lightbulb"></i>2 Luci Motorizzate</li>
-            <li class="disabled"><i class="fas fa-bolt"></i>Set Completo Luci Strobo</li>
-            <li class="disabled"><i class="fas fa-layer-group"></i>Strutture elevate per le luci</li>
-        </ul>
-        <a href="https://wa.me/3331268874?text=Ciao! Vorrei info per il Pacchetto Start" class="cta-wa">
-          <i class="fab fa-whatsapp"></i> PRENOTA START
-        </a>
-      </div>
-    </article>
-
-    <article class="offer-item">
-      <div class="offer-header">
-        <span class="tag">Standard</span>
-        <h2>Pacchetto Party</h2>
-        <div class="price">€ <span>350</span></div>
-      </div>
-      <div class="offer-body">
-        <p class="description">
-        Il pacchetto pensato per chi vuole un’esperienza più immersiva. Luci e audio potenziati, perfetto per compleanni e feste dinamiche.
-        </p>
-        <ul class="specs">
-          <li><i class="fas fa-compact-disc"></i>Console DJ Professionale</li>
-          <li><i class="fas fa-video"></i>Videoproiettore</li>
-            <li><i class="fas fa-volume-up"></i>Impianto Audio High-End</li>
-            <li><i class="fas fa-smog"></i>Macchina Del Fumo</li>
-            <li><i class="fas fa-lightbulb"></i>2 Luci Motorizzate</li>
-            <li><i class="fas fa-bolt"></i>1 Luce Strobo</li>
-            <li class="disabled"><i class="fas fa-layer-group"></i>Strutture elevate per le luci</li>
-        </ul>
-        <a href="https://wa.me/3331268874?text=Ciao! Vorrei info per il Pacchetto Party" class="cta-wa">
-          <i class="fab fa-whatsapp"></i> PRENOTA PARTY
-        </a>
-      </div>
-    </article>
-
-    <article class="offer-item featured">
-      <div class="offer-header">
-        <span class="tag">Il più scelto</span>
-        <h2>Pacchetto Show</h2>
-        <div class="price">€ <span>450</span></div>
-      </div>
-      <div class="offer-body">
-        <p class="description">
-          Esperienza completa e immersiva. Audio e luci al massimo per un evento memorabile. Perfetto per feste grandi dove il ballo è protagonista.
-        </p>
-        <ul class="specs">
-          <li><i class="fas fa-compact-disc"></i>Console DJ Professionale</li>
-          <li><i class="fas fa-video"></i>Videoproiettore</li>
-            <li><i class="fas fa-volume-up"></i>Impianto Audio High-End</li>
-            <li><i class="fas fa-smog"></i>Macchina Del Fumo</li>
-            <li><i class="fas fa-lightbulb"></i>2 Luci Motorizzate</li>
-            <li><i class="fas fa-bolt"></i><strong>Set Completo Luci Strobo</strong></li>
-            <li><i class="fas fa-layer-group"></i><strong>Strutture elevate per le luci</strong></li>
-        </ul>
-        <a href="https://wa.me/3331268874?text=Ciao! Vorrei info per il Pacchetto Show" class="cta-wa">
-          <i class="fab fa-whatsapp"></i> PRENOTA SHOW
-        </a>
-      </div>
-    </article>
-
-    <article class="offer-item premium">
-      <div class="offer-header">
-        <span class="tag">Top di Gamma</span>
-        <h2>Pacchetto Glow</h2>
-        <div class="price">€ <span>650</span></div>
-      </div>
-      <div class="offer-body">
-        <p class="description">
-        Il pacchetto definitivo, trasformiamo la tua location in un vero festival privato. Audio, luci e strutture al massimo livello per un’esperienza da club o da concerto.
-        </p>
-        <ul class="specs">
-          <li><i class="fas fa-compact-disc"></i> Console DJ Professionale</li>
-          <li><i class="fas fa-video"></i>Videoproiettore</li>
-            <li><i class="fas fa-volume-up"></i> Impianto Audio High-End</li>
-            <li><i class="fas fa-smog"></i> Macchina Del Fumo</li>
-            <li><i class="fas fa-lightbulb"></i> <strong>Set Completo Luci Motorizzate</strong></li>
-            <li><i class="fas fa-bolt"></i> <strong>Set Completo Luci Strobo</strong></li>
-            <li><i class="fas fa-layer-group"></i> <strong>Strutture elevate per le luci</strong></li>
-        </ul>
-        <a href="https://wa.me/3331268874?text=Ciao! Vorrei info per il Pacchetto Glow" class="cta-wa">
-          <i class="fab fa-whatsapp"></i> PRENOTA GLOW
-        </a>
-      </div>
-    </article>
-
+<section class="pn rv" id="start" data-par>
+  <div class="pn-img"><img src="p_start.png" alt="Set-up Start con due luci motorizzate, casse e fumo" loading="lazy"><span class="pn-n" aria-hidden="true">01</span></div>
+  <div class="pn-body">
+    <p class="tag">Entry level</p>
+    <h2>Pacchetto Start</h2>
+    <p class="price"><span>€</span><b>300</b></p>
+    <p class="desc">Ideale per feste intime o ambienti piccoli. Tutto il necessario per far partire il party senza complicazioni, con un setup professionale ma compatto.</p>
+    <dl class="diff"><div class=""><dt>Luci motorizzate</dt><dd>2</dd></div><div class="no"><dt>Luci strobo</dt><dd>—</dd></div><div class="no"><dt>Strutture elevate</dt><dd>—</dd></div></dl>
+    <a class="btn btn-ghost" href="https://wa.me/393331268874?text=Ciao!%20Vorrei%20info%20per%20il%20Pacchetto%20Start" target="_blank" rel="noopener">Prenota Start</a>
   </div>
+</section>
+<section class="pn rv" id="party" data-par>
+  <div class="pn-img"><img src="p_party.jpg" alt="Set-up Party con luci viola, traliccio e fumo" loading="lazy"><span class="pn-n" aria-hidden="true">02</span></div>
+  <div class="pn-body">
+    <p class="tag">Standard</p>
+    <h2>Pacchetto Party</h2>
+    <p class="price"><span>€</span><b>350</b></p>
+    <p class="desc">Il pacchetto pensato per chi vuole un'esperienza più immersiva. Luci e audio potenziati, perfetto per compleanni e feste dinamiche.</p>
+    <dl class="diff"><div class=""><dt>Luci motorizzate</dt><dd>2</dd></div><div class="new"><dt>Luci strobo</dt><dd>1 luce</dd></div><div class="no"><dt>Strutture elevate</dt><dd>—</dd></div></dl>
+    <a class="btn btn-ghost" href="https://wa.me/393331268874?text=Ciao!%20Vorrei%20info%20per%20il%20Pacchetto%20Party" target="_blank" rel="noopener">Prenota Party</a>
+  </div>
+</section>
+<section class="pn top rv" id="show" data-par>
+  <div class="pn-img"><img src="p_show.jpg" alt="Set-up Show con luci motorizzate su piedistalli e fumo" loading="lazy"><span class="pn-n" aria-hidden="true">03</span></div>
+  <div class="pn-body">
+    <span class="flag">Il più scelto</span>
+    <h2>Pacchetto Show</h2>
+    <p class="price"><span>€</span><b>450</b></p>
+    <p class="desc">Esperienza completa e immersiva. Audio e luci al massimo per un evento memorabile. Perfetto per feste grandi dove il ballo è protagonista.</p>
+    <dl class="diff"><div class=""><dt>Luci motorizzate</dt><dd>2</dd></div><div class="new"><dt>Luci strobo</dt><dd>Set completo</dd></div><div class="new"><dt>Strutture elevate</dt><dd>Incluse</dd></div></dl>
+    <a class="btn btn-pri" href="https://wa.me/393331268874?text=Ciao!%20Vorrei%20info%20per%20il%20Pacchetto%20Show" target="_blank" rel="noopener">Prenota Show</a>
+  </div>
+</section>
+<section class="pn rv" id="glow" data-par>
+  <div class="pn-img"><img src="p_glow.jpg" alt="Set-up Glow con fontane di scintille e luci motorizzate" loading="lazy"><span class="pn-n" aria-hidden="true">04</span></div>
+  <div class="pn-body">
+    <p class="tag">Top di gamma</p>
+    <h2>Pacchetto Glow</h2>
+    <p class="price"><span>€</span><b>650</b></p>
+    <p class="desc">Il pacchetto definitivo: trasformiamo la tua location in un vero festival privato. Audio, luci e strutture al massimo livello per un'esperienza da club o da concerto.</p>
+    <dl class="diff"><div class="new"><dt>Luci motorizzate</dt><dd>Set completo</dd></div><div class=""><dt>Luci strobo</dt><dd>Set completo</dd></div><div class=""><dt>Strutture elevate</dt><dd>Incluse</dd></div></dl>
+    <a class="btn btn-ghost" href="https://wa.me/393331268874?text=Ciao!%20Vorrei%20info%20per%20il%20Pacchetto%20Glow" target="_blank" rel="noopener">Prenota Glow</a>
+  </div>
+</section>
 
-  <section class="extras">
-    <h3>Servizi Extra (Add-on)</h3>
-    <div class="extra-grid">
-      <div class="extra-pill">Sparkular (La coppia) <strong>+€100</strong></div>
-    </div>
+  <section class="xt wrap rv" id="extra">
+    <h2>Servizi extra</h2>
+    <article class="xc">
+      <div class="xc-img"><img src="p_sparkular.png" alt="Torta circondata da fontane di scintille Sparkular" loading="lazy"></div>
+      <div class="xc-body">
+        <p class="tag">In più</p>
+        <h3>Sparkular (la coppia)</h3>
+        <p class="price"><span>+€</span><b>100</b></p>
+        <p class="desc">Trasforma i momenti clou del tuo evento in uno spettacolo: perfette per il taglio della torta, il primo ballo o un ingresso trionfale.</p>
+        <a class="btn btn-ghost" href="https://wa.me/393331268874?text=Ciao!%20Vorrei%20aggiungere%20Sparkular" target="_blank" rel="noopener">Aggiungi Sparkular</a>
+      </div>
+    </article>
   </section>
-
 </main>
-
-<footer>
-  <p>Glow Events - Soluzioni Audio/Luci Professionali</p>
-  <p><small style="font-size:0.4rem;">Ceci gay</small></p>
-</footer>
-
+<footer class="foot"><div class="wrap"><span class="logo">GLOW<span>events</span></span><p style="margin-top:.8rem">Glow Events - Soluzioni audio e luci professionali</p><p class="foot-bottom">&copy; 2026 Glow Events. Tutti i diritti riservati.</p></div></footer>
+<script src="script.js"></script>
+<script src="progressbar.js"></script>
 </body>
 </html>

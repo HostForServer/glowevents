@@ -8,8 +8,8 @@
 .nav-links{position:fixed;inset:0;z-index:1;display:flex;flex-direction:column;justify-content:center;gap:1.4rem;padding:5rem max(24px,env(safe-area-inset-right,0px)) 3rem max(24px,env(safe-area-inset-left,0px));background:var(--ink);opacity:0;visibility:hidden;transform:translateY(-12px);transition:opacity .3s,transform .3s,visibility 0s .3s}
 .nav-links.active{opacity:1;visibility:visible;transform:none;transition:opacity .3s,transform .3s}
 .nav-links a{font:800 clamp(1.8rem,9vw,2.6rem)/1.1 var(--font-display);letter-spacing:-.03em;text-decoration:none}
-.nav-links a[aria-current]{color:var(--pink)}
-.nav-links a.nav-contact{align-self:flex-start;margin-top:.6rem;padding:.8rem 1.4rem;border-radius:999px;background:linear-gradient(100deg,var(--pink),var(--uv));color:#fff;font-size:1.2rem}
+.nav-links a[aria-current]{color:var(--blue)}
+.nav-links a.nav-contact{align-self:flex-start;margin-top:.6rem;padding:.8rem 1.4rem;border-radius:999px;background:var(--blue-deep);color:#fff;font-size:1.2rem}
 
 @media(min-width:900px){
   .hamburger{display:none}

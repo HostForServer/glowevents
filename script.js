@@ -119,7 +119,7 @@
     var ctx = cv.getContext('2d');
     var W = 0, H = 0, running = false, mx = 0, lastBeat = -1;
     var BPM = 124, beams = [], bars = 0, dots = [], barGrad = null;
-    var COLS = ['255,61,154', '46,230,255', '138,92,255'];
+    var COLS = ['91,155,255', '211,227,255', '42,99,216'];
 
     var size = function () {
       var d = Math.min(window.devicePixelRatio || 1, 2), i, n;
@@ -137,8 +137,8 @@
         dots.push({ x: Math.random(), y: Math.random(), s: 0.02 + Math.random() * 0.05, r: 0.6 + Math.random() * 1.6 });
       }
       barGrad = ctx.createLinearGradient(0, H, 0, H * 0.78);
-      barGrad.addColorStop(0, 'rgba(255,61,154,.55)');
-      barGrad.addColorStop(1, 'rgba(46,230,255,.25)');
+      barGrad.addColorStop(0, 'rgba(91,155,255,.5)');
+      barGrad.addColorStop(1, 'rgba(211,227,255,.25)');
     };
 
     var draw = function (ms) {
